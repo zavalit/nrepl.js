@@ -1,4 +1,4 @@
-var _ = require("underscore");
+var objectAssign = require('object-assign');
 var DONE = "done";
 var EVAL_ERROR = "eval-error";
 
@@ -9,7 +9,7 @@ function EvalResponse() {
   this._errorChunks = [];
 }
 
-_.extend(EvalResponse.prototype, {
+objectAssign(EvalResponse.prototype, {
   addChunk: function(chunk) {
     if (chunk.value)
       this._valueChunks.push(chunk.value);
