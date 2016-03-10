@@ -1,6 +1,6 @@
 {
   "name": "nrepl-browser.js",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "javascript nrepl client for browser",
   "main": "index.js",
   "scripts": {
