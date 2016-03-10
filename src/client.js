@@ -1,12 +1,12 @@
 var _ = require("underscore");
-var net = require("net");
+var socket = require("socket.io-client");
 var bencode = require("bencode");
 var EvalResponse = require("./eval_response");
 var DescribeResponse = require("./describe_response");
 
 function Client() {
   this._isConnected = false;
-  this._socket = new net.Socket();
+  this._socket = new socket();
   this._requests = {};
   this._nextRequestId = 0;
 }

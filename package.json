@@ -1,7 +1,7 @@
 {
-  "name": "nrepl.js",
+  "name": "nrepl-browser.js",
   "version": "0.0.0",
-  "description": "javascript nrepl client",
+  "description": "javascript nrepl client for browser",
   "main": "index.js",
   "scripts": {
     "test": "mocha spec"
@@ -14,14 +14,14 @@
     "clojure",
     "nrepl"
   ],
-  "author": "max brunsfeld",
   "license": "BSD",
   "bugs": {
     "url": "https://github.com/maxbrunsfeld/nrepl.js/issues"
   },
   "dependencies": {
-    "underscore": "1.5.x",
-    "bencode": "0.4.x"
+    "bencode": "0.4.x",
+    "socket.io-client": "^1.4.5",
+    "underscore": "1.5.x"
   },
   "devDependencies": {
     "mocha": "1.15.x",
