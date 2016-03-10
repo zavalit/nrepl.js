@@ -1,10 +1,10 @@
-var _ = require("underscore");
+var objectAssign = require('object-assign');
 
 function DescribeResponse() {
   this._value = null;
 }
 
-_.extend(DescribeResponse.prototype, {
+objectAssign(DescribeResponse.prototype, {
   addChunk: function(chunk) {
     this._value = chunk;
   },

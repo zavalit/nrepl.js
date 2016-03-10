@@ -1,4 +1,4 @@
-var _ = require("underscore");
+var objectAssign = require('object-assign');
 var socket = require("socket.io-client");
 var bencode = require("bencode");
 var EvalResponse = require("./eval_response");
@@ -11,7 +11,7 @@ function Client() {
   this._nextRequestId = 0;
 }
 
-_.extend(Client.prototype, {
+objectAssign(Client.prototype, {
   connect: function(port, fn) {
     var self = this;
     self._socket
@@ -65,7 +65,7 @@ function sendRequest(self, request, response, fn) {
 
 function handleData(self, data) {
   var messages = decodeMessages(data);
-  _.each(messages, function(message) {
+  messages.map(function(message) {
     var id = message.id;
     var request = self._requests[id];
     if (!request) return;
